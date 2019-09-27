@@ -2,8 +2,8 @@ import { Router } from 'express';
 // import UserValidation from '../middleware/createValidation'
 import userValid from '../middleware/userValid';
 import validateAll from '../middleware/validateAll';
-// import validateConnection from '../middleware/connectValid';
-// import validationsConnection from '../middleware/connectMidd';
+ import validateConnection from '../middleware/connectValid';
+import validationsConnection from '../middleware/connectMidd';
 // import postValidation from '../middleware/postAut';
 import userController from '../controller/userController';
 // import postController from '../controller/postController';
@@ -16,7 +16,7 @@ router.post('/auth/sign_up',
     userValid,
     validateAll,
     userController.create);
-// router.post('/auth/connect', validateConnection, validationsConnection, userController.connect);
+ router.post('/auth/connect', validateConnection, validationsConnection, userController.connect);
 // router.post('/articles', postValidation, postController.create);
 // const newLocal = '/auth/edit/:id';
 
