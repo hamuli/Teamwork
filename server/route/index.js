@@ -1,23 +1,23 @@
 import { Router } from 'express';
-// import UserValidation from '../middleware/createValidation'
+//import UserValidation from '../middleware/createValidation'
 import userValid from '../middleware/userValid';
 import validateAll from '../middleware/validateAll';
- import validateConnection from '../middleware/connectValid';
+import validateConnection from '../middleware/connectValid';
 import validationsConnection from '../middleware/connectMidd';
-// import postValidation from '../middleware/postAut';
+import postValidation from '../middleware/postAut';
 import userController from '../controller/userController';
-// import postController from '../controller/postController';
+import postController from '../controller/postController';
 // import commentController from '../controller/commentController';
 import ErrorHandler from '../middleware/errorHandler';
 
 const router = new Router();
 
 router.post('/auth/sign_up',
-    userValid,
-    validateAll,
-    userController.create);
- router.post('/auth/connect', validateConnection, validationsConnection, userController.connect);
-// router.post('/articles', postValidation, postController.create);
+  userValid,
+  validateAll,
+  userController.create);
+router.post('/auth/connect', validateConnection, validationsConnection, userController.connect);
+router.post('/articles', postValidation, postController.create);
 // const newLocal = '/auth/edit/:id';
 
 // router.patch(newLocal, postValidation, postController.edit);
