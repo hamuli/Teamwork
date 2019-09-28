@@ -13,14 +13,17 @@ export const create = (data)=> {
   return newpost;
 };
 
-export const findOne = (ArticleId)=> postDb.find((OnePost)=> OnePost.AticleId === ArticleId);
+export const findOne = (ArticleId)=> postDb.find((OnePost)=> OnePost.ArticleId.toString() === ArticleId);
 
 export const update = (ArticleId, data)=> {
   const index = parseInt(ArticleId);
+  console.log(ArticleId)
 
-  postDb[index].title = data.title;
-  postDb[index].article = data.article;
-  return postDb[index];
+
+  postDb[index - 1].title = data.title;
+
+  postDb[index - 1].article = data.article;
+  return postDb[index - 1];
 };
 export const moveout = (ArticleId)=> {
   const oneId = findOne(ArticleId);

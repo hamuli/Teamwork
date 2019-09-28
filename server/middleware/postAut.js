@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const { SECRET } = process.env;
 
-module.exports = (req, res, next)=> {
+const checkToken = (req, res, next)=> {
   let token = req.header('auth-token');
 
   if (!token) return res.status(401).send({ status: 401, message: 'access denied' });
@@ -17,5 +17,7 @@ module.exports = (req, res, next)=> {
     return res.status(401).send({ status: 401, error: 'invalid token' });
   }
 };
+
+export default checkToken;
 
 
