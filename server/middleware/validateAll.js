@@ -1,18 +1,19 @@
-  import { validationResult } from 'express-validator';
-  const validateAll = (req, res, next) => {
-      const validationError = validationResult(req);
+import { validationResult } from 'express-validator';
 
-      if (!validationError.isEmpty()) {
-          const errorMsg = validationError.mapped();
+const validateAll = (req, res, next)=> {
+  const validationError = validationResult(req);
 
-          return res.status(401).json({
-              status: 401,
-              message: 'Invalid input value',
-              error: errorMsg,
-          });
-      }
+  if (!validationError.isEmpty()) {
+    const errorMsg = validationError.mapped();
 
-      return next();
-  };
+    return res.status(401).json({
+      status: 401,
+      message: 'Invalid input value',
+      error: errorMsg,
+    });
+  }
 
-  export default validateAll;
+  return next();
+};
+
+export default validateAll;
