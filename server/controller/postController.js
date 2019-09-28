@@ -1,5 +1,5 @@
 import {
-  create, findOne, edit, moveout, getAll, viewSpecifics,
+  create, findOne, update, moveout, getAll, viewSpecifics,
 } from '../model/postModel';
 
 require('dotenv').config();
@@ -12,18 +12,16 @@ const post = {
     return res.status(200).send({ status: 200, message: 'post created', data: (newPost) });
   },
   edit(req, res) {
-    const getId = findOne(req.params.id);
-
-    if (!getId) {
-      return res.status(404).send({ status: 400, error: 'not found' });
+    const findOneArticle = findOne(req.params.id);
+    if (!findOneArticle) {
+      return res.status(404).send({ status: 400, error: 'Article not found' });
     }
+    if (req.userData.id.toString() === findOneArticle.authorId) {
+      const editOneArticle = update(findOneArticle.ArticleId, req.body);
 
-    if (req.userData.id === findOne.authorId.toString()) {
-      const edits = edit(req.params.id, req.body);
-
-      return res.status(200).send({ status: 200, message: 'post deleted' });
+      return res.status(200).send({ status: 200, message: 'post was updated succesfully', data: { editOneArticle } });
     }
-    return res.status(200).send({ status: 200, error: 'you can not delete this post' });
+    return res.status(401).send({ status: 401, error: 'you can not edit this post' });
   },
 
   delete(req, res) {
