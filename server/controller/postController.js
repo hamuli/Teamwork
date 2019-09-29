@@ -15,10 +15,6 @@ const post = {
   edit(req, res) {
     const findOneArticle = findOne(req.params.id);
 
-    console.log(req.params.id);
-
-    console.log(findOneArticle);
-    console.log(req.userData);
     if (!findOneArticle) {
       return res.status(404).send({ status: 400, error: 'Article not found' });
     }
