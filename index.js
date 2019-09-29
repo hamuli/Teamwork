@@ -6,7 +6,7 @@ import router from './server/route/index';
 
 let app = express();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(express.json());
