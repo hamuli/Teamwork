@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/prefer-default-export
+
 export const postDb = [];
 
 export const create = (data)=> {
@@ -14,28 +14,29 @@ export const create = (data)=> {
   return newpost;
 };
 
-export const findOne = (ArticleId)=> postDb.find((OnePost)=> OnePost.AticleId === ArticleId);
-export const edit = (ArticleId, data)=> {
-  const oneId = findOne(ArticleId);
-  const index = postDb.indexOf(oneId);
+export const findOne = (ArticleId)=> postDb.find((OnePost)=> OnePost.ArticleId.toString() === ArticleId);
 
-  postDb[index].title = data.title || oneId.title;
-  postDb[index].article = data.article || oneId.article;
-  return postDb[index];
+export const update = (ArticleId, data)=> {
+  const index = parseInt(ArticleId);
+  console.log(ArticleId)
+
+
+  postDb[index - 1].title = data.title;
+
+  postDb[index - 1].article = data.article;
+  return postDb[index - 1];
+
 };
 export const moveout = (ArticleId)=> {
   const oneId = findOne(ArticleId);
   const index = postDb.indexOf(oneId);
 
   postDb.splice(index, 1);
+
   // return {};
 };
-export const viewSpecifics = (data)=> {
-  
+  return {};
 };
-
-
-console.log(viewSpecifics);
 export const getAll = ()=> postDb;
 
 
