@@ -8,6 +8,7 @@ import postValidation from '../middleware/postAut';
 import userController from '../controller/userController';
 import postController from '../controller/postController';
 
+
 import commentController from '../controller/commentController';
 
 import ErrorHandler from '../middleware/errorHandler';
@@ -25,6 +26,4 @@ router.get('/articles/:id', postController.viewSpecific);
 router.post('/aricles/:id/comments', postValidation, commentController.create);
 //router.use(ErrorHandler);
 router.use(ErrorHandler);
-
-
 export default router;

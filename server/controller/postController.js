@@ -1,5 +1,5 @@
 import {
-  create, findOne, moveout, getAll, update,
+  create, findOne, moveout, getAll, update, viewSpecifics,
 } from '../model/postModel';
 
 require('dotenv').config();
@@ -41,7 +41,7 @@ const post = {
     }
   },
   viewSpecific(req, res) {
-    const findOneId = findOne(req.params.ArticleId);
+    const findOneId = findOne(req.params.id);
 
     if (!findOneId) {
       return res.status(404).send({ status: 400, error: 'not found' });
