@@ -1,4 +1,3 @@
-
 import {
   create, findOne, moveout, getAll, update,
 } from '../model/postModel';
@@ -14,7 +13,6 @@ const post = {
   },
   edit(req, res) {
     const findOneArticle = findOne(req.params.id);
-
     if (!findOneArticle) {
       return res.status(404).send({ status: 400, error: 'Article not found' });
     }
