@@ -1,4 +1,3 @@
-
 export const commentDb = [];
 export const create = (data)=> {
   const newComment = {
@@ -13,5 +12,4 @@ export const create = (data)=> {
   commentDb.push(newComment);
   return newComment;
 };
-
 
