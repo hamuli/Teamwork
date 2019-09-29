@@ -19,3 +19,4 @@ app.all('*', (req, res) => res.status(404).send({ status: 404, error: 'Route not
 app.listen(PORT, () => {
     console.log(`Teamwork server has been started on port:${PORT}`);
 });
+export default app;

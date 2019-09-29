@@ -6,7 +6,15 @@
     "scripts": {
         "build": "babel server.js --out-dir build",
         "start": "nodemon --exec babel-node index.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test | coveralls",
+        "test": "nyc mocha --exit --timeout 4000 --require @babel/register  ./server/tests/*.js"
+    },
+    "nyc": {
+        "require": [
+            "@babel/register"
+        ],
+        "sourceMap": true,
+        "instrument": true
     },
     "repository": {
         "type": "git",
@@ -22,8 +30,14 @@
     },
     "homepage": "https://github.com/hamuli/Teamwork#readme",
     "dependencies": {
+        "@babel/cli": "^7.6.2",
+        "@babel/core": "^7.6.2",
+        "@babel/node": "^7.6.2",
+        "@babel/preset-env": "^7.6.2",
+        "append-transform": "^2.0.0",
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
+        "coveralls": "^3.0.6",
         "dotenv": "^8.1.0",
         "express": "^4.17.1",
         "express-validator": "^6.2.0",
@@ -34,15 +48,23 @@
         "uuid": "^3.3.3"
     },
     "devDependencies": {
+        "@babel/register": "^7.6.2",
         "@typescript-eslint/eslint-plugin": "^2.3.0",
         "@typescript-eslint/parser": "^2.3.0",
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.3",
         "babel-node": "0.0.1-security",
+        "babel-plugin-istanbul": "^5.2.0",
         "babel-preset-env": "^1.7.0",
         "babel-register": "^6.26.0",
         "babel-watch": "^7.0.0",
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "cross-env": "^6.0.0",
         "eslint": "^6.4.0",
-        "nodemon": "^1.19.2"
+        "mocha": "^6.2.1",
+        "mocha-lcov-reporter": "^1.3.0",
+        "nodemon": "^1.19.2",
+        "nyc": "^14.1.1"
     }
 }
