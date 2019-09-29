@@ -1,3 +1,6 @@
+
+import { commentDb } from './commentModel';
+
 export const postDb = [];
 
 export const create = (data)=> {
@@ -13,11 +16,13 @@ export const create = (data)=> {
   return newpost;
 };
 
+// eslint-disable-next-line max-len
 export const findOne = (ArticleId)=> postDb.find((OnePost)=> OnePost.ArticleId.toString() === ArticleId);
 
 export const update = (ArticleId, data)=> {
   const index = parseInt(ArticleId);
-  console.log(ArticleId)
+
+  console.log(ArticleId);
 
 
   postDb[index - 1].title = data.title;
@@ -31,6 +36,11 @@ export const moveout = (ArticleId)=> {
 
   postDb.splice(index, 1);
   return {};
+};
+export const viewSpecifics = (article)=> {
+  // eslint-disable-next-line max-len
+  article.comments = commentDb.filter((comment)=> parseInt(comment.ArticleId) === parseInt(article.ArticleId));
+  return article;
 };
 
 export const getAll = ()=> postDb;
