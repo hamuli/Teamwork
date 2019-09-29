@@ -12,3 +12,4 @@ export const create = (data)=> {
   commentDb.push(newComment);
   return newComment;
 };
+
