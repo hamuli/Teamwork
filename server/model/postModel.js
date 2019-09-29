@@ -1,3 +1,4 @@
+
 export const postDb = [];
 
 export const create = (data)=> {
@@ -24,15 +25,18 @@ export const update = (ArticleId, data)=> {
 
   postDb[index - 1].article = data.article;
   return postDb[index - 1];
+
 };
 export const moveout = (ArticleId)=> {
   const oneId = findOne(ArticleId);
   const index = postDb.indexOf(oneId);
 
   postDb.splice(index, 1);
+
+  // return {};
+};
   return {};
 };
-
 export const getAll = ()=> postDb;
 
 

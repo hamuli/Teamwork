@@ -1,5 +1,5 @@
 import { Router } from 'express';
-// import UserValidation from '../middleware/createValidation'
+//import UserValidation from '../middleware/createValidation'
 import userValid from '../middleware/userValid';
 import validateAll from '../middleware/validateAll';
 import validateConnection from '../middleware/connectValid';
@@ -12,11 +12,11 @@ import ErrorHandler from '../middleware/errorHandler';
 
 const router = new Router();
 
+
+// const newLocal = '/auth/edit/:id';
 router.post('/auth/sign_up', userValid, validateAll, userController.create);
 router.post('/auth/connect', validateConnection, validationsConnection, userController.connect);
 router.post('/articles', postValidation, postController.create);
-
-
 router.patch('/article/:id', postValidation, postController.edit);
 // router.delete('/auth/delete/:id', postValidation, postController.delete);
 // router.get('/feeds', postController.getAll);

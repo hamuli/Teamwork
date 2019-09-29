@@ -1,6 +1,7 @@
 
 import {
   create, findOne, moveout, getAll, update,
+
 } from '../model/postModel';
 
 require('dotenv').config();
