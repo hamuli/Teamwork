@@ -15,7 +15,7 @@ const stockData = {
       firstName: 'michee',
       lastName: 'mbolela',
       password: 'mbolela123',
-      email: 'mbolela@gmail.com',
+      email: 'mbolegmail.com',
       gender: 'women',
       jobRole: 'IT manager',
       departement: 'Administration',
