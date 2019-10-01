@@ -47,6 +47,7 @@ body#landing {
     margin-right: 50px;
     margin-bottom: 2px;
     margin-top: -50px;
+    font-size:16px;
 }
 
 .navbar--link {
@@ -62,10 +63,10 @@ body#landing {
 
 #searchbars {
     outline: none;
-    width: 400px;
+    width: 500px;
     height: 20px;
     padding: 12px 20px;
-    margin-left: 280px;
+    margin-left: 380px;
     border-radius: 7px 7px 7px 7px;
     box-sizing: border-box;
     border: 1px solid black;
@@ -97,10 +98,10 @@ body#landing {
 .startMessage {
     margin-top: 105px;
     border: 1px solid white;
-    width: 600px;
+    width: 900px;
     height: 200px;
     margin-right: 100px;
-    margin-left: -50px;
+    margin-left: -200px;
     background-color: white;
     border-radius: 20px;
 }
@@ -111,7 +112,7 @@ body#landing {
 
 a,
 p {
-    text-decoration: none;
+    text-decoration: none;color:black;
 }
 
 .replay {
@@ -178,7 +179,6 @@ p {
     font-weight: bold;
 }
 
-.centerpl {}
 
 .Onecomments a {
     text-align: center;
@@ -224,7 +224,7 @@ p {
 .empty {
     border: 1px solid white;
     height: 25px;
-    width: 598px;
+    width: auto;
     background-color: #1e3056;
     border-radius: 5px;
 }
@@ -257,9 +257,11 @@ p {
     display: flex;
     flex-direction: row;
 }
-
+.send:hover {
+    color: white;
+    background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 .send {
-    margin-left: 420px;
+    margin-left: 720px;
     margin-top: 15px;
     border: 1px solid #1e3056;
     width: 100px;
@@ -294,22 +296,13 @@ p {
     color: #1e3056;
 }
 
-.myIcons {
-    border: 1px solid #1e3056;
-    width: 50px;
-    height: 30px;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 10px;
-}
-
 .Mypost {
     border: 2px solid white;
     margin-top: 10px;
-    width: 600px;
+    width: 900px;
     height: 560px;
     margin-right: 100px;
-    margin-left: -50px;
+    margin-left: -200px;
     background-color: white;
     border-radius: 20px;
 }
@@ -338,14 +331,14 @@ p {
 .borderMessage {
     border-bottom: 1px solid black;
     height: 90px;
-    width: 598px;
+    width: auto;
     border-radius: 5px;
 }
 
 .thisPhoto {
     border: 1px solid #1e3056;
-    width: 30px;
-    height: 20px;
+    width: 50px;
+    height: 60px;
     border-radius: 10%;
     color: #1e3056;
     padding-bottom: 5px;
@@ -365,8 +358,8 @@ p {
 }
 
 .time {
-    margin-right: 340px;
-    margin-bottom: 2px;
+    margin-right: 540px;
+    margin-top: -23px;
     font-weight: bold;
 }
 
@@ -374,7 +367,9 @@ img {
     margin: 1px;
     width: 400px;
 }
-
+.comment:hover {
+    color: white;
+    background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 .comment {
     margin-right: 350px;
     margin-left: 20px;
@@ -387,6 +382,9 @@ img {
     padding-top: 5px;
     margin-top: 5px;
 }
+.share:hover {
+    color: white;
+    background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 
 .share {
     border: 1px solid #1e3056;
@@ -397,6 +395,7 @@ img {
     padding-bottom: 5px;
     padding-top: 5px;
     margin-top: 5px;
+    margin-left: 300px;
 }
 
 .footer {
@@ -428,11 +427,11 @@ img {
     text-align: center;
     color: #1e3056;
     margin-top: 10px;
-    width: 600px;
+    width: 900px;
     height: 30px;
     padding-top: 10px;
     margin-right: 100px;
-    margin-left: -50px;
+    margin-left: -200px;
     background-color: white;
     border-radius: 10px;
     margin-bottom: 5px;
@@ -460,12 +459,12 @@ img {
     background: linear-gradient(to right, #1e3056 0, #1e3056 100%);
 }
 .modify {
-    margin-top: 106px;
+    margin-top: 66px;
     cursor: pointer;
     outline: none;
-    margin-left: 198px;
+    margin-left: 328px;
     border-radius: 7px;
-    width: 100px;
+    width: 900px;
     height: 40px;
     font-size: 15px;
     text-align: center;
@@ -476,7 +475,7 @@ img {
     margin-left: 500px;
     margin-top: 105px;
     border: 1px solid white;
-    width: 320px;
+    width: 620px;
     height: 500px;
     background-color: white;
     border-radius: 20px;
@@ -501,7 +500,7 @@ img {
     width: 300px;
 }
 .all {
-    width: 200px;
+    width: 500px;
     height: 50px;
     border: 2px solid #1e3056;
     margin-left: 55px;
@@ -534,12 +533,16 @@ img {
     color: white;
     background-color: #1e3056;
 }
+.build:hover {
+    color: white;
+    background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 .build {
-    margin-left: 320px;
+    margin-left: 620px;
     border: 1px solid #1e3056;
     color: #1e3056;
     width: 40px;
     height: 20px;
+    cursor: pointer;
     padding-bottom: 5px;
     padding-top: 5px;
     border-radius: 5px;
@@ -745,9 +748,6 @@ button,
         margin-top: 10px;
     }
     
-    .send {
-        margin-left: 610px;
-    }
     
     .photos {
         margin-left: 89px;
@@ -782,6 +782,7 @@ button,
         height: 80px;
         border-radius: 3px;
         margin-top: 10px;
+       
         margin-left: 20px;
         font-size: 16px;
         border-radius: 20px;
