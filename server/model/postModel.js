@@ -5,8 +5,8 @@ export const postDb = [];
 
 export const create = (data)=> {
   const newpost = {
-    ArticleId: postDb.length + 1,
-    created_on: new Date().toLocaleString(),
+    articleId: postDb.length + 1,
+    createdOn: new Date().toLocaleString(),
     title: data.title,
     article: data.article,
     authorId: data.authorId,
@@ -17,21 +17,18 @@ export const create = (data)=> {
 };
 
 // eslint-disable-next-line max-len
-export const findOne = (ArticleId)=> postDb.find((OnePost)=> OnePost.ArticleId.toString() === ArticleId);
+export const findOne = (ArticleId)=> postDb.find((OnePost)=> OnePost.articleId.toString() === ArticleId);
 
-export const update = (ArticleId, data)=> {
-  const index = parseInt(ArticleId);
-
-  console.log(ArticleId);
-
+export const update = (articleId, data)=> {
+  const index = parseInt(articleId);
 
   postDb[index - 1].title = data.title;
 
   postDb[index - 1].article = data.article;
   return postDb[index - 1];
 };
-export const moveout = (ArticleId)=> {
-  const oneId = findOne(ArticleId);
+export const moveout = (articleId)=> {
+  const oneId = findOne(articleId);
   const index = postDb.indexOf(oneId);
 
   postDb.splice(index, 1);
@@ -39,7 +36,7 @@ export const moveout = (ArticleId)=> {
 };
 export const viewSpecifics = (article)=> {
   // eslint-disable-next-line max-len
-  article.comments = commentDb.filter((comment)=> parseInt(comment.ArticleId) === parseInt(article.ArticleId));
+  article.comments = commentDb.filter((comment)=> parseInt(comment.articleId) === parseInt(article.articleId));
   return article;
 };
 
