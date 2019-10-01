@@ -42,6 +42,7 @@ body#landing{ background:#F5F5F5;}
 .navbar--link
 {
     margin-right: 20px;
+    font-size: 15px;
     text-decoration: none;
      color: #1e3056;
     }
@@ -49,6 +50,8 @@ body#landing{ background:#F5F5F5;}
     color: blue; 
     text-decoration: underline;
 }
+.icons{font-size: 10px;}
+.icon{float: right;}
 #searchbars{
     outline: none;
      width: 400px;
@@ -74,9 +77,9 @@ body#landing{ background:#F5F5F5;}
 .startMessage{
     margin-top: 105px;
     border:1px solid white;
-    width: 600px;height:200px;
-    margin-right: 100px;
-    margin-left: -50px;
+    width: 900px;height:200px;
+    margin-right: 10px;
+    margin-left: -210px;
     background-color: white;
     border-radius: 20px;
 }
@@ -113,7 +116,7 @@ a ,p{
 .glodie
 {
     margin-right: 440px; 
-    color: #1e3056;
+    color: black;
 }
 .allcomment button
 {
@@ -171,19 +174,20 @@ a ,p{
 {
     border: 1px solid white;
     height: 25px;
-    width: 598px;
+    width: auto;
     background-color:#1e3056;
     border-radius: 5px;
 }
 .textPosts{
     outline: none;
      width:400px;
+     padding: 10px;
      height: 80px;
      border-radius: 3px;
      margin-top: 40px;
      margin-left: 20px;
      font-size: 16px;
-     border-radius: 20px;
+     border-radius: 10px;
      border:1px solid #1e3056;
     }
 .textPost
@@ -194,22 +198,27 @@ a ,p{
      border-radius: 3px;
      margin-top: 20px;
      margin-left: 20px;
+     padding-left:20px;
+     padding-right:20px;
      font-size: 16px;
      border-radius: 20px;
      border:1px solid #1e3056;
     }
 .photo{display: flex;flex-direction: row;}
 .send{
-    margin-left: 420px;
+    margin-left: 680px;
     margin-top: 15px;
     border: 1px solid #1e3056;
     width: 100px;
     height: 30px;
     text-align: center;
+  
     padding-top: 5px;
     border-radius: 20px;
     color: #1e3056;
 }
+.send:hover { color: white;
+    background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 .pucture
 {
     float: left;
@@ -234,18 +243,21 @@ a ,p{
 .myIcons{
     border: 1px solid #1e3056;
     width: 50px;
+    
     height: 30px;
     border-radius: 5px;
     text-align: center;
-    margin-top :10px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 .Mypost{
     border: 2px solid white;
     margin-top: 10px;
-    width: 600px;
+    width: 900px;
     height:560px;
-    margin-right: 100px;
-    margin-left: -50px;
+    margin-right: 10px;
+    margin-left: -210px;
     background-color: white;
     border-radius: 20px;
 }
@@ -262,12 +274,12 @@ a ,p{
 .borderMessage
 {
     border-bottom: 1px solid black;
-    height: 90px;width: 598px;border-radius: 5px;
+    height: 90px;width: autos;border-radius: 5px;
 }
 .thisPhoto
 {
     border: 1px solid #1e3056;
-    width: 30px;height: 20px;
+    width: 50px;height: 60px;
     border-radius: 10%;
     color: #1e3056;
     padding-bottom: 5px;
@@ -282,8 +294,9 @@ a ,p{
 }
 .title{margin-bottom:10px;}
 .time{
-    margin-right: 340px;
-    margin-bottom:2px;
+    margin-right: 580px;
+
+    margin-top:-30px;
     font-weight: bold;
 }
 img{margin: 1px;width: 400px;}
@@ -297,7 +310,11 @@ img{margin: 1px;width: 400px;}
     padding-bottom: 5px;
     padding-top:5px;
     margin-top: 5px;}
-.share{border: 1px solid #1e3056;width: 90px;height: 20px;border-radius: 10px;color: #1e3056;padding-bottom: 5px;padding-top:5px;margin-top: 5px;}
+    .comment:hover { color:white;
+        background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
+    .share:hover { color:white;
+        background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
+.share{border: 1px solid #1e3056;margin-right: -700px;width: 90px;height: 20px;border-radius: 10px;color: #1e3056;padding-bottom: 5px;padding-top:5px;margin-top: 5px;}
 .footer{display: flex;flex-direction:row;}
 .MypostMessage{ border: 2px solid white;margin-top: 10px;width: 600px;height:560px;margin-right: 100px;margin-left: -50px;background-color: white;border-radius: 20px; }
 .images{margin: 2px;border:1px ;width: 320px;}
@@ -306,9 +323,23 @@ img{margin: 1px;width: 400px;}
 .imagess{margin: 2px;border:1px ;width: 470px;}
 .myprofils{margin-top: 105px;border:1px solid white;width: 600px;height:400px;margin-right: 100px;margin-left: -50px;background-color: white;	border-radius: 20px;
  }
- .modify[type=submit]:hover { color: white;
+ .icons {
+    font-size: 15px;}
+ .modify:hover { color: white;
     background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
- .modify{ margin-top: 106px;cursor: pointer; outline: none; margin-left:198px;border-radius: 7px; width: 100px;height:40px; font-size: 15px;text-align: center; }
+ .modify{
+    margin-top: 60px;
+    cursor: pointer; 
+    outline: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px; 
+    background-color: #1e3056;
+    width: 900px;
+    height:40px;
+    margin-left:320px;
+    font-size: 15px;
+    text-align: center; }
 .myprofil{margin-bottom: 40px;text-align: center; margin-left: 500px;margin-top: 105px;border:1px solid white;width: 320px;height:500px;background-color: white;	border-radius: 20px;}
 .iconProfil{margin-right: -15px; margin-left:5px; margin-bottom: 10px;
 	width: 70px; border: 1px solid #1e3056;margin-top: 10px;padding-top: 10px;padding-bottom: 10px; padding-right: 10px; padding-left: 10px; border-radius: 50%;
@@ -321,7 +352,8 @@ img{margin: 1px;width: 400px;}
 .inputHere{ margin-top: 20px; }
 .input{outline: none; margin-bottom: 10px; width: 90%;padding: 12px 20px;box-sizing: border-box; border-radius: 10px; border: 1px solid #1e3056; text-align: center;font-size: 16px; }
 .validation{outline: none; cursor: pointer; width: 100px;border-radius: 10px 10px 10px 10px; height: 50px; border: 1px solid #1e3056; color: white;background-color: #1e3056; }
-.build{margin-left: 320px; border: 1px solid #1e3056;color:#1e3056;  width: 40px; height: 20px;padding-bottom:5px;padding-top: 5px;border-radius: 5px;}
+
+.build{cursor: pointer; margin-left: 620px; border: 1px solid #1e3056;color:#1e3056;  width: 40px; height: 20px;padding-bottom:5px;padding-top: 5px;border-radius: 5px;}
 .id{text-decoration: none;}
 .navbar a{color: #1e3056;} 
 .show{ display: flex !important; }
@@ -368,16 +400,15 @@ a, p{ font-size:9px;  width: 300px;}
     height: 40px;
     width: 350px;}
     .thisPhoto {
-        width: 30px;
-        height: 20px;
+        width: 90px;
+        height: 60px;
         border-radius: 5%;
         color: #1e3056;
     margin-right: 100px;
     margin-top:-3px;
     }
     .borderMessage{width: auto}
-element.style {
-}
+
 .myprofil {
     margin-bottom: 40px;
     text-align: center;
@@ -386,13 +417,12 @@ element.style {
     cursor: pointer;
     outline: none;
 
-    margin-left: 198px;}
+    margin-left: 10px;}
     .imgs {
         width: 100px;
     }
     .build {
      margin-left: -10px;width: 20px;}
-     .share{margin-left:-20px;width: 40px;}
     .time{margin-top:-20px;}
     .title{ margin-left: -100px;margin-left: 20px;}
     .searchbar {
@@ -400,32 +430,11 @@ element.style {
         width: 200px;
     }
     #searchbars {margin-left: 30px;}
-    .send {margin-left: 20px; width: 40px;}
+    
     .navbar {padding: 10px 10px;}
     .logo{ width: 60px; margin-left: 80px;}
     .navleft{margin-top: 30px;margin-left: 100px;}
     #searchbars { margin-left: -100px;}
-    .myfooter {
-  
-        width: 350px;
-        height: 20px;
-    }
-}
-@media only screen and (max-width: 768px){
-.startMessage{ width: 400px;}
-.empty{width:auto;}
-.textPost{width:200px;}
-.Mypost{width: 760px;height:400px;; }
-.send {margin-left: 220px; width: 40px;}
-.Mypost{width: 400px;}
-img{width:200px; margin-right: 20px;}
-a,p{font-size: 10px; width:400px;}
-.borderMessage{width:auto;}
-.thisPhoto {margin-right: 100px;}
-.logo{margin-left: 200px;}
-.share{margin-left: -160px;}
-.imgs{width:180px;}
-.footer{}
 .searchbar {
    
     width: 170px;
@@ -438,31 +447,59 @@ a,p{font-size: 10px; width:400px;}
 .build {
     margin-left: -80px;width: 20px;}
     .title{margin-right: 100px;}
-    .modify {
-        margin-top: 66px;}
+.modify {
+        margin-top: 66px; cursor: pointer;}
 #searchbars {
            
             width: 200px;
             margin-left: 0px;
         }
 }
-@media only screen and (max-width: 1027px){
-     .startMessage{width:700px;}
+@media only screen and (max-width: 1024px){
+     .startMessage.startMessage {
+        width: 550px;
+        margin-left: -100px;
+    }
      .empty{width: auto;}
-     .logo{margin-left: 230px;}
-          .share{margin-left: -2px;}
-     .Mypost{width:700px;}
-     .borderMessage{width: 700px;}
+     .textPost{width: 200px;}
+     .logo{margin-left: 50px; margin-left:30px;}
+     .share{margin-right: -1px; width: 50px;}
+     .Mypost{width:550px;margin-left: -100px;}
+     .borderMessage{width: auto;}
      .myfooter{width: 700px;}
+
+     .time {
+        margin-right: 180px;
+        margin-top: -20px;}
      #searchbars {
-           
         width: 100px;
         margin-left: 0px;
     }
-    .navleft{margin-top: 10px;}
-    .modify{margin-top:90px;}
+    .searchbar {
+        outline: none;
+        width: 300px;
+        height: 20px;
+        padding: 12px 20px;
+        margin-left: 10px;}
+        .navleft {
+            margin-top: 4px;
+            float: right;
+            margin-right: 10px;
+            margin-bottom: 2px;
+           
+        }
+    .send{margin-left: 350px;}
+    
+    .modify{
+        width: 550px;
+        height:40px;
+        margin-left:40px;
+        font-size: 15px;
+        text-align: center;}
+    .myfooter{margin-left: -100px; width:550px;}
     #searchbars {
         width: 300px;
         margin-left: 0px;
     }
+ 
 }
