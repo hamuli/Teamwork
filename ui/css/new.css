@@ -112,7 +112,7 @@ a {
 }
 
 .mx-auto {
-    margin-left: 550px;;
+    margin-left: 950px;;
 }
 
 h1 {
@@ -154,17 +154,13 @@ h1 {
     .f-g-4.ml-5 {
         margin-left: 5px;
     }
-    .form-content {
-        width: 200px;;
-    }
+   
 }
 
 .logo {
     margin-top: 30px;
 }
-.mx-auto {
-    margin-left: 250px;;
-}
+
 @media all and (min-width: 800px) {
     h1 {
         font-size: 45px;
@@ -184,9 +180,7 @@ h1 {
     .f-g-4.ml-5 {
         margin-left: 5px;
     }
-    .form-content {
-        max-width: 35rem;
-    }
+  
 }
 
 @media only screen and (max-width: 800px) {

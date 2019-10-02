@@ -185,7 +185,7 @@ p {
     text-decoration: none;
 }
 .centertext{
-    margin-right:420px;
+    margin-right:370px;
 }
 .replay {
     float: right;
@@ -462,7 +462,7 @@ img {
     margin-top: 66px;
     cursor: pointer;
     outline: none;
-    margin-left:215px;
+    margin-left:315px;
     border-radius: 7px;
     width: 900px;
     height: 40px;

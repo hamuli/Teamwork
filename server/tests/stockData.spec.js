@@ -3,13 +3,15 @@ const stockData = {
   signup: [
     {
       firstName: 'glodie',
-      lastName: 'hamuli',
-      password: '123456789',
-      email: 'daniel@gmail.com',
+      lastName: 'glodie',
+      password: 'glodire123',
+      email: 'glodiehamuiilii@gmail.com',
       gender: 'man',
       jobRole: 'IT manager',
       departement: 'Technic',
       address: 'goma',
+
+
     },
     {
       firstName: 'michee',
@@ -34,22 +36,41 @@ const stockData = {
   ],
   signin: [
     {
-      password: '123456789',
-      email: 'daniel@gmail.com',
+      password: 'glodire123',
+      email: 'glodiehamuiilii@gmail.com',
     },
     {
-      password: 'mbolela123',
-      email: 'mbolela@gmail.com',
+      password: 'glodire',
+      email: 'glodiehamuiilii@gmail.com',
     },
     {
-      password: 'aaron123',
-      email: 'aaronBk@gmail.com',
+      password: 'glodire123',
+      email: 'glodehamuiilii@gmail.com',
     },
     {
-      email: 'bienvenue@gmail.com',
-      password: 'Ch@11223344',
+      password: 'glod',
+      email: 'glodiehamuiilii@gmail.com',
+    },
+    {
+      password: 'glod334455',
+      email: 'glodiehamuiiliigmail.com',
+    },
+  ],
+  articles: [
+    {
+      title: 'NETWORKING ',
+      article: ' networkihg is good ',
+    },
+    {
+      title: 'NETWORKING FOR EVERY ONE ',
+      article: 'This is the article content ',
+    },
+    {
+      title: 'NETWORKING FOR EVERY ONE ',
+      article: 'This is the article content ',
     },
   ],
 };
+
 
 export default stockData;
