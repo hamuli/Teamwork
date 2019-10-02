@@ -66,8 +66,8 @@ const stockData = {
       article: 'This is the article content ',
     },
     {
-      title: 'NETWORKING FOR EVERY ONE ',
-      article: 'This is the article content ',
+      title: '',
+      article: '',
     },
   ],
 };
