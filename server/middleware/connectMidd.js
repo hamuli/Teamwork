@@ -6,8 +6,8 @@ const validateConnection = (req, res, next)=> {
   if (!validationError.isEmpty()) {
     const errorMsg = validationError.mapped();
 
-    return res.status(422).json({
-      status: 422,
+    return res.status(400).json({
+      status: 400,
       message: 'Invalid input value',
       error: errorMsg,
     });

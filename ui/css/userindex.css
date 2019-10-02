@@ -47,6 +47,7 @@ body#landing {
     margin-right: 50px;
     margin-bottom: 2px;
     margin-top: -50px;
+    font-size:16px;
 }
 
 .navbar--link {
@@ -62,10 +63,10 @@ body#landing {
 
 #searchbars {
     outline: none;
-    width: 400px;
+    width: 500px;
     height: 20px;
     padding: 12px 20px;
-    margin-left: 280px;
+    margin-left: 380px;
     border-radius: 7px 7px 7px 7px;
     box-sizing: border-box;
     border: 1px solid black;
@@ -97,10 +98,10 @@ body#landing {
 .startMessage {
     margin-top: 105px;
     border: 1px solid white;
-    width: 600px;
+    width: 900px;
     height: 200px;
     margin-right: 100px;
-    margin-left: -50px;
+    margin-left: -200px;
     background-color: white;
     border-radius: 20px;
 }
@@ -111,7 +112,7 @@ body#landing {
 
 a,
 p {
-    text-decoration: none;
+    text-decoration: none;color:black;
 }
 
 .replay {
@@ -147,7 +148,7 @@ p {
 }
 
 .glodie {
-    margin-right: 440px;
+    margin-right: 740px;
     color: #1e3056;
 }
 
@@ -178,13 +179,14 @@ p {
     font-weight: bold;
 }
 
-.centerpl {}
 
 .Onecomments a {
     text-align: center;
     text-decoration: none;
 }
-
+.centertext{
+    margin-right:370px;
+}
 .replay {
     float: right;
     margin-right: 30px;
@@ -224,7 +226,7 @@ p {
 .empty {
     border: 1px solid white;
     height: 25px;
-    width: 598px;
+    width: auto;
     background-color: #1e3056;
     border-radius: 5px;
 }
@@ -257,9 +259,11 @@ p {
     display: flex;
     flex-direction: row;
 }
-
+.send:hover {
+    color: white;
+    background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 .send {
-    margin-left: 420px;
+    margin-left: 720px;
     margin-top: 15px;
     border: 1px solid #1e3056;
     width: 100px;
@@ -294,22 +298,13 @@ p {
     color: #1e3056;
 }
 
-.myIcons {
-    border: 1px solid #1e3056;
-    width: 50px;
-    height: 30px;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 10px;
-}
-
 .Mypost {
     border: 2px solid white;
     margin-top: 10px;
-    width: 600px;
+    width: 900px;
     height: 560px;
     margin-right: 100px;
-    margin-left: -50px;
+    margin-left: -200px;
     background-color: white;
     border-radius: 20px;
 }
@@ -338,14 +333,14 @@ p {
 .borderMessage {
     border-bottom: 1px solid black;
     height: 90px;
-    width: 598px;
+    width: auto;
     border-radius: 5px;
 }
 
 .thisPhoto {
     border: 1px solid #1e3056;
-    width: 30px;
-    height: 20px;
+    width: 50px;
+    height: 30px;
     border-radius: 10%;
     color: #1e3056;
     padding-bottom: 5px;
@@ -359,22 +354,22 @@ p {
     margin-left: 25px;
     margin-top: 15px;
 }
-
-.title {
-    margin-bottom: 10px;
-}
-
+.title{margin-right:200px;margin-bottom:10px;}
 .time {
-    margin-right: 340px;
-    margin-bottom: 2px;
+    margin-right: 630px;
+    margin-top: -3px;
     font-weight: bold;
 }
+.one{columns: #1e1e1e;}
+
 
 img {
     margin: 1px;
-    width: 400px;
+    width: 460px;
 }
-
+.comment:hover {
+    color: white;
+    background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 .comment {
     margin-right: 350px;
     margin-left: 20px;
@@ -387,6 +382,9 @@ img {
     padding-top: 5px;
     margin-top: 5px;
 }
+.share:hover {
+    color: white;
+    background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 
 .share {
     border: 1px solid #1e3056;
@@ -397,6 +395,7 @@ img {
     padding-bottom: 5px;
     padding-top: 5px;
     margin-top: 5px;
+    margin-left: 300px;
 }
 
 .footer {
@@ -428,11 +427,11 @@ img {
     text-align: center;
     color: #1e3056;
     margin-top: 10px;
-    width: 600px;
+    width: 900px;
     height: 30px;
     padding-top: 10px;
     margin-right: 100px;
-    margin-left: -50px;
+    margin-left: -200px;
     background-color: white;
     border-radius: 10px;
     margin-bottom: 5px;
@@ -460,12 +459,12 @@ img {
     background: linear-gradient(to right, #1e3056 0, #1e3056 100%);
 }
 .modify {
-    margin-top: 106px;
+    margin-top: 66px;
     cursor: pointer;
     outline: none;
-    margin-left: 198px;
+    margin-left:205px;
     border-radius: 7px;
-    width: 100px;
+    width: 900px;
     height: 40px;
     font-size: 15px;
     text-align: center;
@@ -476,7 +475,7 @@ img {
     margin-left: 500px;
     margin-top: 105px;
     border: 1px solid white;
-    width: 320px;
+    width: 620px;
     height: 500px;
     background-color: white;
     border-radius: 20px;
@@ -501,7 +500,7 @@ img {
     width: 300px;
 }
 .all {
-    width: 200px;
+    width: 500px;
     height: 50px;
     border: 2px solid #1e3056;
     margin-left: 55px;
@@ -534,12 +533,16 @@ img {
     color: white;
     background-color: #1e3056;
 }
+.build:hover {
+    color: white;
+    background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 .build {
-    margin-left: 320px;
+    margin-left: 400px;
     border: 1px solid #1e3056;
     color: #1e3056;
     width: 40px;
     height: 20px;
+    cursor: pointer;
     padding-bottom: 5px;
     padding-top: 5px;
     border-radius: 5px;
@@ -698,16 +701,30 @@ button,
         width: auto;
         margin-top: 10px;
     }
-    
+    .modify {
+        margin-top: 200px;
+        margin-left: -680px;;
+        border-radius: 7px;
+        width: 920px;
+        height: 40px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .searchbar {
+           
+        width: 400px; 
+        height: 20px; 
+       padding: 12px 20px;
+        margin-left: 100px; 
+       border-radius: 7px 7px 7px 7px;
+       box-sizing: border-box;
+       border: 1px solid black;
+   }
     .Onecomment {
         width: auto;
     }
     
-    .navright input {
-        margin-right: 500px;
-        margin-top: 5px;
-        padding-left: 10px;
-    }
+    
     
     .column {
         width: 100%;
@@ -716,9 +733,11 @@ button,
     
     .navleft {
         margin-right: 400px;
-        margin-top: 40px;
+        margin-top: -20px;
     }
-    
+    .send {
+        margin-left: 600px;
+    }
     .logo {
         width: 100px;
         margin-left: 30px;
@@ -726,46 +745,46 @@ button,
     
     .startMessage {
         margin-top: -20px;
-        width: 950px;
-        margin-left: -260px;
+        width: 920px;
+        margin-left: -290px;
         background-color: white;
         border-radius: 20px;
         background-color: white;
     }
     
     .empty {
-        width: 945px;
+        width: auto;
     }
     
     .textPost {
-        width: 700px;
+        width: 600px;
     }
     
     .myIcons {
         margin-top: 10px;
     }
     
-    .send {
-        margin-left: 610px;
-    }
     
     .photos {
         margin-left: 89px;
     }
     
     .Mypost {
-        width: 950px;
+        width: 920px;
         margin-right: 100px;
-        margin-left: -260px;
+        margin-left: -290px;
     }
-    
+    img {
+        margin: 1px;
+        width: 470px;
+    }
     .build {
-        margin-left: 670px;
+        margin-left: 400px;
     }
     /*.popup{margin-left: 750px;}*/
     
     .share {
-        margin-left: 350px;
+        margin-left: 290px;
     }
     
     .borderMessage {
@@ -782,6 +801,7 @@ button,
         height: 80px;
         border-radius: 3px;
         margin-top: 10px;
+       
         margin-left: 20px;
         font-size: 16px;
         border-radius: 20px;
@@ -812,11 +832,7 @@ button,
         .Onecomment {
             width: auto;
         }
-        .navright input {
-            margin-right: 300px;
-            margin-top: 5px;
-            padding-left: 50px;
-        }
+        
         .modify {
             margin-right: 30px;
         }
@@ -825,21 +841,39 @@ button,
             margin-left: 300px;
         }
         .navleft {
-            margin-right: 300px;
-            margin-top: 37px;
+            margin-right: 400px;
+            margin-top: -25px;
+        }
+        .modify {
+            margin-top: 90px;
+            margin-left: -560px;;
+            border-radius: 7px;
+            width: 700px;
+            height: 40px;
+            font-size: 15px;
+            text-align: center;
+        }
+        .searchbar {
+            width: 200px;
+            height: 20px;
+            padding: 12px 20px;
+            margin-left: 70px;
+            border-radius: 7px 7px 7px 7px;
+            box-sizing: border-box;
+            border: 1px solid black;
         }
         .logo {
             width: 100px;
             margin-left: 30px;
         }
         .startMessage {
-            width: 780px;
+            width: 700px;
             margin-left: -260px;
             background-color: white;
             border-radius: 20px;
         }
         .empty {
-            width: 780px;
+            width:auto;
         }
         .textPost {
             width: 650px;
@@ -848,28 +882,39 @@ button,
             margin-top: 10px;
         }
         .send {
-            margin-left: 510px;
+            margin-left: 450px;
         }
         .photos {
             margin-left: 89px;
         }
         .Mypost {
-            width: 777px;
+            width: 700px;
         }
         .build {
-            margin-left: 500px;
+            margin-left: 200px;
         }
         .popup {
             margin-left: 750px;
         }
         .share {
-            margin-left: 180px;
+            margin-left: 100px;
         }
         .borderMessage {
             width: auto;
         }
+        .myfooter {
+           
+            width: 690px;
+            
+            margin-left: -250px;
+          
+        }
+        img {
+            margin: 1px;
+            width: 430px;
+        }
         .time {
-            margin-right: 590px
+            margin-right: 430px
         }
         .myprofil {
             text-align: center;
@@ -903,21 +948,39 @@ button,
         .modify {
             margin-right: auto;
         }
+        .title{font-size:11px; margin-left:20px;}
+        .text{font-size:11px;}
         .column {
             width: 100%;
             margin-left: 370px;
         }
+  .thisPhoto {
+    width: 30px; 
+    height: 20px;
+
+}
         .navleft {
             margin-right: 300px;
             margin-top: 37px;
         }
+        .navleft {
+         float: left; margin-left:20; font-size:13px;}
+        .searchbar {
+           
+             width: 160px; 
+             height: 20px; 
+            padding: 12px 20px;
+             margin-left: 20px; 
+            border-radius: 7px 7px 7px 7px;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
         .logo {
             width: 100px;
-            margin-left: 100px;
-        }
+            margin-left: 1px;}
         .startMessage {
             height: 230px;
-            width: 670px;
+            width: 320px;
             margin-left: -340px;
             background-color: white;
             border-radius: 20px;
@@ -926,36 +989,49 @@ button,
             width: auto;
         }
         .textPost {
-            width: 600px;
+            width: 290px;
         }
         .myIcons {
             margin-top: 2px;
             margin-right: 600px;
         }
         .send {
-            margin-left: 400px;
+            margin-left: 200px; width:40px;
         }
         .photos {
-            margin-left: 89px;
+            margin-left: 9px;
         }
+        .comment{width: 30px;height:30px;}
         .Mypost {
-            width: 660px;
+            width: 320px;height:450px;
             margin-left: -340px
         }
+        .imgs{width:200px;}
         .build {
-            margin-left: 400px;
+            margin-left: -200px;
         }
         .popup {
             margin-left: 750px;
         }
         .share {
-            margin-left: 80px;
+            margin-left: -300px; width: 30px;height: 30px;
         }
         .borderMessage {
             width: auto;
         }
+        .myfooter {
+            border: 1px solid #1e3056;
+            font-size: 14px;
+            width: 300px;
+            height: 20px;
+            margin-left: -320px;
+            background-color: white;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
         .time {
-            font-size: 10px;
+          
+                margin-right: 100px;font-size:12px;margin-top:5px;
         }
         .myprofil {
             text-align: center;
