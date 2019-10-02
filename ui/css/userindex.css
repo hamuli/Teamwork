@@ -148,7 +148,7 @@ p {
 }
 
 .glodie {
-    margin-right: 440px;
+    margin-right: 740px;
     color: #1e3056;
 }
 
@@ -184,7 +184,9 @@ p {
     text-align: center;
     text-decoration: none;
 }
-
+.centertext{
+    margin-right:420px;
+}
 .replay {
     float: right;
     margin-right: 30px;
@@ -338,7 +340,7 @@ p {
 .thisPhoto {
     border: 1px solid #1e3056;
     width: 50px;
-    height: 60px;
+    height: 30px;
     border-radius: 10%;
     color: #1e3056;
     padding-bottom: 5px;
@@ -352,20 +354,18 @@ p {
     margin-left: 25px;
     margin-top: 15px;
 }
-
-.title {
-    margin-bottom: 10px;
-}
-
+.title{margin-right:200px;margin-bottom:10px;}
 .time {
-    margin-right: 540px;
-    margin-top: -23px;
+    margin-right: 630px;
+    margin-top: -3px;
     font-weight: bold;
 }
+.one{columns: #1e1e1e;}
+
 
 img {
     margin: 1px;
-    width: 400px;
+    width: 460px;
 }
 .comment:hover {
     color: white;
@@ -462,7 +462,7 @@ img {
     margin-top: 66px;
     cursor: pointer;
     outline: none;
-    margin-left: 328px;
+    margin-left:329px;
     border-radius: 7px;
     width: 900px;
     height: 40px;
@@ -537,7 +537,7 @@ img {
     color: white;
     background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 .build {
-    margin-left: 620px;
+    margin-left: 400px;
     border: 1px solid #1e3056;
     color: #1e3056;
     width: 40px;
@@ -701,16 +701,30 @@ button,
         width: auto;
         margin-top: 10px;
     }
-    
+    .modify {
+        margin-top: 200px;
+        margin-left: -680px;;
+        border-radius: 7px;
+        width: 920px;
+        height: 40px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .searchbar {
+           
+        width: 400px; 
+        height: 20px; 
+       padding: 12px 20px;
+        margin-left: 100px; 
+       border-radius: 7px 7px 7px 7px;
+       box-sizing: border-box;
+       border: 1px solid black;
+   }
     .Onecomment {
         width: auto;
     }
     
-    .navright input {
-        margin-right: 500px;
-        margin-top: 5px;
-        padding-left: 10px;
-    }
+    
     
     .column {
         width: 100%;
@@ -719,9 +733,11 @@ button,
     
     .navleft {
         margin-right: 400px;
-        margin-top: 40px;
+        margin-top: -20px;
     }
-    
+    .send {
+        margin-left: 600px;
+    }
     .logo {
         width: 100px;
         margin-left: 30px;
@@ -729,19 +745,19 @@ button,
     
     .startMessage {
         margin-top: -20px;
-        width: 950px;
-        margin-left: -260px;
+        width: 920px;
+        margin-left: -290px;
         background-color: white;
         border-radius: 20px;
         background-color: white;
     }
     
     .empty {
-        width: 945px;
+        width: auto;
     }
     
     .textPost {
-        width: 700px;
+        width: 600px;
     }
     
     .myIcons {
@@ -754,18 +770,21 @@ button,
     }
     
     .Mypost {
-        width: 950px;
+        width: 920px;
         margin-right: 100px;
-        margin-left: -260px;
+        margin-left: -290px;
     }
-    
+    img {
+        margin: 1px;
+        width: 470px;
+    }
     .build {
-        margin-left: 670px;
+        margin-left: 400px;
     }
     /*.popup{margin-left: 750px;}*/
     
     .share {
-        margin-left: 350px;
+        margin-left: 290px;
     }
     
     .borderMessage {
@@ -813,11 +832,7 @@ button,
         .Onecomment {
             width: auto;
         }
-        .navright input {
-            margin-right: 300px;
-            margin-top: 5px;
-            padding-left: 50px;
-        }
+        
         .modify {
             margin-right: 30px;
         }
@@ -826,21 +841,39 @@ button,
             margin-left: 300px;
         }
         .navleft {
-            margin-right: 300px;
-            margin-top: 37px;
+            margin-right: 400px;
+            margin-top: -25px;
+        }
+        .modify {
+            margin-top: 90px;
+            margin-left: -560px;;
+            border-radius: 7px;
+            width: 700px;
+            height: 40px;
+            font-size: 15px;
+            text-align: center;
+        }
+        .searchbar {
+            width: 200px;
+            height: 20px;
+            padding: 12px 20px;
+            margin-left: 70px;
+            border-radius: 7px 7px 7px 7px;
+            box-sizing: border-box;
+            border: 1px solid black;
         }
         .logo {
             width: 100px;
             margin-left: 30px;
         }
         .startMessage {
-            width: 780px;
+            width: 700px;
             margin-left: -260px;
             background-color: white;
             border-radius: 20px;
         }
         .empty {
-            width: 780px;
+            width:auto;
         }
         .textPost {
             width: 650px;
@@ -849,28 +882,39 @@ button,
             margin-top: 10px;
         }
         .send {
-            margin-left: 510px;
+            margin-left: 450px;
         }
         .photos {
             margin-left: 89px;
         }
         .Mypost {
-            width: 777px;
+            width: 700px;
         }
         .build {
-            margin-left: 500px;
+            margin-left: 200px;
         }
         .popup {
             margin-left: 750px;
         }
         .share {
-            margin-left: 180px;
+            margin-left: 100px;
         }
         .borderMessage {
             width: auto;
         }
+        .myfooter {
+           
+            width: 690px;
+            
+            margin-left: -250px;
+          
+        }
+        img {
+            margin: 1px;
+            width: 430px;
+        }
         .time {
-            margin-right: 590px
+            margin-right: 430px
         }
         .myprofil {
             text-align: center;
@@ -904,21 +948,39 @@ button,
         .modify {
             margin-right: auto;
         }
+        .title{font-size:11px; margin-left:20px;}
+        .text{font-size:11px;}
         .column {
             width: 100%;
             margin-left: 370px;
         }
+  .thisPhoto {
+    width: 30px; 
+    height: 20px;
+
+}
         .navleft {
             margin-right: 300px;
             margin-top: 37px;
         }
+        .navleft {
+         float: left; margin-left:20; font-size:13px;}
+        .searchbar {
+           
+             width: 160px; 
+             height: 20px; 
+            padding: 12px 20px;
+             margin-left: 20px; 
+            border-radius: 7px 7px 7px 7px;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
         .logo {
             width: 100px;
-            margin-left: 100px;
-        }
+            margin-left: 1px;}
         .startMessage {
             height: 230px;
-            width: 670px;
+            width: 320px;
             margin-left: -340px;
             background-color: white;
             border-radius: 20px;
@@ -927,36 +989,49 @@ button,
             width: auto;
         }
         .textPost {
-            width: 600px;
+            width: 290px;
         }
         .myIcons {
             margin-top: 2px;
             margin-right: 600px;
         }
         .send {
-            margin-left: 400px;
+            margin-left: 200px; width:40px;
         }
         .photos {
-            margin-left: 89px;
+            margin-left: 9px;
         }
+        .comment{width: 30px;height:30px;}
         .Mypost {
-            width: 660px;
+            width: 320px;height:450px;
             margin-left: -340px
         }
+        .imgs{width:200px;}
         .build {
-            margin-left: 400px;
+            margin-left: -200px;
         }
         .popup {
             margin-left: 750px;
         }
         .share {
-            margin-left: 80px;
+            margin-left: -300px; width: 30px;height: 30px;
         }
         .borderMessage {
             width: auto;
         }
+        .myfooter {
+            border: 1px solid #1e3056;
+            font-size: 14px;
+            width: 300px;
+            height: 20px;
+            margin-left: -320px;
+            background-color: white;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
         .time {
-            font-size: 10px;
+          
+                margin-right: 100px;font-size:12px;margin-top:5px;
         }
         .myprofil {
             text-align: center;
