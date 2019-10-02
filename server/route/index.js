@@ -16,6 +16,7 @@ import ErrorHandler from '../middleware/errorHandler';
 
 const router = new Router();
 
+// routes
 router.post('/auth/sign_up', userValid, validateAll, userController.create);
 router.post('/auth/connect', validateConnection, validateAll, userController.connect);
 router.post('/articles', postValidations, validateAll, postController.create);
