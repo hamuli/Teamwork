@@ -22,6 +22,9 @@ export const findOne = (ArticleId)=> postDb.find((OnePost)=> OnePost.ArticleId.t
 export const update = (ArticleId, data)=> {
   const index = parseInt(ArticleId);
 
+  console.log(ArticleId);
+
+
   postDb[index - 1].title = data.title;
 
   postDb[index - 1].article = data.article;
