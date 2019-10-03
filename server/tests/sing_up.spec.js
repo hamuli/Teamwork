@@ -53,203 +53,290 @@ describe('sign up', ()=> {
         done();
       });
   });
+});
+describe('Sign In', ()=> {
+  it('it should sign in user  with a valid data ', (done)=> {
+    chai.request(app)
+      .post('/api/v1/auth/connect')
+      .set('content-type', 'application/json')
+      .set('Content-type', 'application/x-www-form-urlencoded')
+      .send(stockData.signin[0])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(201);
+        done();
+      });
+  });
+  it('it should not sign in with an empty input', (done)=> {
+    chai.request(app)
+      .post('/api/v1/auth/connect')
+      .set('Content-type', 'application/x-www-form-urlencoded')
+      .send()
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(400);
+        done();
+      });
+  });
+  it('it should sign in with an invalid password', (done)=> {
+    chai.request(app)
+      .post('/api/v1/auth/connect')
+      .set('Content-type', 'application/x-www-form-urlencoded')
+      .send(stockData.signin[1])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(400);
+        done();
+      });
+  });
+  it('it should not sign in with an invalid email', (done)=> {
+    chai.request(app)
+      .post('/api/v1/auth/connect')
+      .set('Content-type', 'application/x-www-form-urlencoded')
+      .send(stockData.signin[2])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
+      });
+  });
+  it('it should not sign in with a password that no much 6 element and have at least one number ', (done)=> {
+    chai.request(app)
+      .post('/api/v1/auth/connect')
+      .set('Content-type', 'application/x-www-form-urlencoded')
+      .send()
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(400);
+        done();
+      });
+  });
+  it('it should not sign in with a email that no have @ . in it', (done)=> {
+    chai.request(app)
+      .post('/api/v1/auth/connect')
+      .set('Content-type', 'application/x-www-form-urlencoded')
+      .send(stockData.signin[3])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(400);
+        done();
+      });
+  });
+  it('it should not create an account with an empty input', (done)=> {
+    chai.request(app)
+      .post('/api/v1/auth/connect')
+      .set('Content-type', 'application/x-www-form-urlencoded')
+      .send(stockData.signin[4])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(400);
+        done();
+      });
+  });
+});
 
-  describe('Sign In', ()=> {
-    it('it should sign in user  with a valid data ', (done)=> {
-      chai.request(app)
-        .post('/api/v1/auth/connect')
-        .set('content-type', 'application/json')
-        .set('Content-type', 'application/x-www-form-urlencoded')
-        .send(stockData.signin[0])
-        .end((err, res)=> {
-          if (err) done(err);
-          expect(res.status).to.equal(201);
-          done();
-        });
-    });
-    it('it should not sign in with an empty input', (done)=> {
-      chai.request(app)
-        .post('/api/v1/auth/connect')
-        .set('Content-type', 'application/x-www-form-urlencoded')
-        .send()
-        .end((err, res)=> {
-          if (err) done(err);
-          expect(res.status).to.equal(400);
-          done();
-        });
-    });
-    it('it should sign in with an invalid password', (done)=> {
-      chai.request(app)
-        .post('/api/v1/auth/connect')
-        .set('Content-type', 'application/x-www-form-urlencoded')
-        .send(stockData.signin[1])
-        .end((err, res)=> {
-          if (err) done(err);
-          expect(res.status).to.equal(400);
-          done();
-        });
-    });
-    it('it should not sign in with an invalid email', (done)=> {
-      chai.request(app)
-        .post('/api/v1/auth/connect')
-        .set('Content-type', 'application/x-www-form-urlencoded')
-        .send(stockData.signin[2])
-        .end((err, res)=> {
-          if (err) done(err);
-          expect(res.status).to.equal(401);
-          done();
-        });
-    });
-    it('it should not sign in with a password that no much 6 element and have at least one number ', (done)=> {
-      chai.request(app)
-        .post('/api/v1/auth/connect')
-        .set('Content-type', 'application/x-www-form-urlencoded')
-        .send()
-        .end((err, res)=> {
-          if (err) done(err);
-          expect(res.status).to.equal(400);
-          done();
-        });
-    });
-    it('it should not sign in with a email that no have @ . in it', (done)=> {
-      chai.request(app)
-        .post('/api/v1/auth/connect')
-        .set('Content-type', 'application/x-www-form-urlencoded')
-        .send(stockData.signin[3])
-        .end((err, res)=> {
-          if (err) done(err);
-          expect(res.status).to.equal(400);
-          done();
-        });
-    });
-    it('it should not create an account with an empty input', (done)=> {
-      chai.request(app)
-        .post('/api/v1/auth/connect')
-        .set('Content-type', 'application/x-www-form-urlencoded')
-        .send(stockData.signin[4])
-        .end((err, res)=> {
-          if (err) done(err);
-          expect(res.status).to.equal(400);
-          done();
-        });
-    });
+describe('Creation of a Article post', ()=> {
+  let tokens = authenticateUser('glodie@gmail.com', 1);
 
-    describe('Creation of a Article post', ()=> {
-      let tokens = authenticateUser('glodie@gmail.com', 'id');
+  it('Should return an error with a 401 status when the user is not authenticated', (done)=> {
+    chai.request(app)
+      .post('/api/v1/articles')
+      .set('content-type', 'application/json')
+      .set('auth-token', 'invalid token')
+      .set('auth-token', '')
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
+      });
+  });
 
-      it('Should return an error with a 401 status when the user is not authenticated', (done)=> {
-        chai.request(app)
-          .post('/api/v1/articles')
-          .set('content-type', 'application/json')
-          .set('auth-token', 'invalid token')
-          .end((err, res)=> {
-            if (err) done(err);
-            expect(res.status).to.equal(401);
-            done();
-          });
+  it('Should return an error with a 401 acces denied ', (done)=> {
+    chai.request(app)
+      .post('/api/v1/articles')
+      .set('content-type', 'application/json')
+      .set('auth-token', '')
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
       });
-      it('Should return an error with a 401 acces denied ', (done)=> {
-        chai.request(app)
-          .post('/api/v1/articles')
-          .set('content-type', 'application/json')
-          .set('auth-token', '')
-          .end((err, res)=> {
-            if (err) done(err);
-            expect(res.status).to.equal(401);
-            done();
-          });
+  });
+
+  it('access to articles route allowed, but should not post article when title is empty', (done)=> {
+    chai.request(app)
+      .post('/api/v1/articles')
+      .set('content-type', 'application/json')
+      .set('auth-token', `${tokens}`)
+      .send(stockData.articles[3])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
       });
-      it('access to articles route allowed, but should not post article when title is empty', (done)=> {
-        chai.request(app)
-          .post('/api/v1/articles')
-          .set('content-type', 'application/json')
-          .set('auth-token', `${tokens}`)
-          .send(stockData.articles[3])
-          .end((err, res)=> {
-            if (err) done(err);
-            expect(res.status).to.equal(401);
-            done();
-          });
+  });
+  it('access to articles route allowed, but should not post article when Article is empty', (done)=> {
+    chai.request(app)
+      .post('/api/v1/articles')
+      .set('content-type', 'application/json')
+      .set('auth-token', `${tokens}`)
+      .send(stockData.articles[3])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
       });
-      it('access to articles route allowed, but should not post article when Article is empty', (done)=> {
-        chai.request(app)
-          .post('/api/v1/articles')
-          .set('content-type', 'application/json')
-          .set('auth-token', `${tokens}`)
-          .send(stockData.articles[3])
-          .end((err, res)=> {
-            if (err) done(err);
-            expect(res.status).to.equal(401);
-            done();
-          });
+  });
+  it('access to articles route allowed, but should not post article when both field are empty', (done)=> {
+    chai.request(app)
+      .post('/api/v1/articles')
+      .set('content-type', 'application/json')
+      .set('auth-token', `${tokens}`)
+      .send(stockData.articles[3])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
       });
-      it('access to articles route allowed, but should not post article when both field are empty', (done)=> {
-        chai.request(app)
-          .post('/api/v1/articles')
-          .set('content-type', 'application/json')
-          .set('auth-token', `${tokens}`)
-          .send(stockData.articles[3])
-          .end((err, res)=> {
-            if (err) done(err);
-            expect(res.status).to.equal(401);
-            done();
-          });
+  });
+
+  it('whene everything is okey then create an article', (done)=> {
+    chai.request(app)
+      .post('/api/v1/articles')
+      .set('content-type', 'application/json')
+      .set('auth-token', `${tokens}`)
+      .send(stockData.articles[0])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(200);
+        done();
       });
-      it('whene everything is okey then create an article', (done)=> {
-        chai.request(app)
-          .post('/api/v1/articles')
-          .set('content-type', 'application/json')
-          .set('auth-token', `${tokens}`)
-          .send(stockData.articles[0])
-          .end((err, res)=> {
-            if (err) done(err);
-            expect(res.status).to.equal(200);
-            done();
-          });
+  });
+  it('Should return an error with a 401 status when the user is not authenticated', (done)=> {
+    chai.request(app)
+      .patch('/api/v1/article/:id')
+      .set('content-type', 'application/json')
+      .set('auth-token', 'invalid token')
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
       });
-      it('Should return an error with a 401 status when the user is not authenticated', (done)=> {
-        chai.request(app)
-          .patch('/api/v1/article/:id')
-          .set('content-type', 'application/json')
-          .set('auth-token', 'invalid token')
-          .end((err, res)=> {
-            if (err) done(err);
-            expect(res.status).to.equal(401);
-            done();
-          });
+  });
+  it('user can not edit a post without an article id ', (done)=> {
+    chai.request(app)
+      .patch('/api/v1/article/:id')
+      .set('content-type', 'application/json')
+      .set('auth-token', `${tokens}`)
+      .send(stockData.articles[0])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(404);
+        done();
       });
-      it('user can not edit a post without an article id ', (done)=> {
-        chai.request(app)
-          .patch('/api/v1/article/:id')
-          .set('content-type', 'application/json')
-          .set('auth-token', `${tokens}`)
-          .send(stockData.articles[0])
-          .end((err, res)=> {
-            if (err) done(err);
-            expect(res.status).to.equal(404);
-            done();
-          });
+  });
+
+  it('user can not edit a post without an token ', (done)=> {
+    chai.request(app)
+      .patch('/api/v1/article/:id')
+      .set('content-type', 'application/json')
+      .set('auth-token', '')
+      .send(stockData.articles[0])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
       });
-      it('it will return all post  ', (done)=> {
-        chai.request(app)
-          .get('/api/v1/feeds')
-          .set('content-type', 'application/json')
-          .end((err, res)=> {
-            if (err) done(err);
-            expect(res.status).to.equal(200);
-            done();
-          });
+  });
+
+  it('it will return all post  ', (done)=> {
+    chai.request(app)
+      .get('/api/v1/feeds')
+      .set('content-type', 'application/json')
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(200);
+        done();
       });
-      it('it will return a post with all comment', (done)=> {
-        chai.request(app)
-          .get('/api/v1/articles/:id')
-          .set('content-type', 'application/json')
-          .end((err, res)=> {
-            if (err) done(err);
-            expect(res.status).to.equal(200);
-            done();
-          });
+  });
+  it('user can not edit a post that you didn\'t  post', (done)=> {
+    chai.request(app)
+      .patch('/api/v1/article/1')
+      .set('content-type', 'application/json')
+      .set('auth-token', `${tokens}`)
+      .send(stockData.articles[0])
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
       });
-    });
+  });
+  it('it will return a post with all comment', (done)=> {
+    chai.request(app)
+      .get('/api/v1/articles/1')
+      .set('content-type', 'application/json')
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(200);
+        done();
+      });
+  });
+  it('it will return 200  if the article is deleted', (done)=> {
+    chai.request(app)
+      .delete('/api/v1/delete/1')
+      .set('content-type', 'application/json')
+      .set('auth-token', `${tokens}`)
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(200);
+        done();
+      });
+  });
+
+  it('you can not delete a post that is not yours', (done)=> {
+    chai.request(app)
+      .delete('/api/v1/delete/1')
+      .set('content-type', 'application/json')
+      .set('auth-token', `${tokens}`)
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
+      });
+  });
+  it('it will return 401  if there is not token ', (done)=> {
+    chai.request(app)
+      .delete('/api/v1/delete/1')
+      .set('content-type', 'application/json')
+      .set('auth-token', `${tokens}`)
+      .set('auth-token', '')
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(401);
+        done();
+      });
+  });
+
+  it('it will return 404 in an invalid token ', (done)=> {
+    chai.request(app)
+      .delete('/api/v1/delete/1')
+      .set('content-type', 'application/json')
+      .set('auth-token', 'iiiwyywddddddddbdbbd')
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(404);
+        done();
+      });
+  });
+  it('it will return 404 if the article id is not found', (done)=> {
+    chai.request(app)
+      .delete('api/v1/delete/12')
+      .set('content-type', 'application/json')
+      .set('auth-token', `${tokens}`)
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(404);
+        done();
+      });
   });
 });

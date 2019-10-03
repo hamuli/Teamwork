@@ -10,7 +10,6 @@ const stockData = {
       departement: 'Technic',
       address: 'goma',
 
-
     },
     {
       firstName: 'michee',
@@ -57,14 +56,17 @@ const stockData = {
   ],
   articles: [
     {
+      id: 1,
       title: 'NETWORKING',
       article: 'networkihg is good',
     },
     {
+      id: 2,
       title: 'NETWORKING FOR EVERY ONE ',
       article: 'This is the article content ',
     },
     {
+      id: 3,
       title: '',
       article: 'this is my artcle ',
     },
@@ -77,6 +79,31 @@ const stockData = {
       article: '',
     },
   ],
+
+  // eslint-disable-next-line no-dupe-keys
+  comments: [
+    {
+      ArticleTitle: 'medecine',
+      comment: 'This is my comment on second article',
+      article: "for i'm winner",
+    },
+    {
+      ArticleTitle: '',
+      comment: 'This is my comment on second article',
+      article: "for i'm winner",
+    },
+    {
+      ArticleTitle: 'medecine',
+      comment: '',
+      article: "for i'm winner",
+    },
+    {
+      ArticleTitle: 'medecine',
+      comment: 'uuuuuuuuuuuuuuuuuytrre',
+      article: '',
+    },
+  ],
+
 };
 
 

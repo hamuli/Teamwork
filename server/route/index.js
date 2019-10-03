@@ -20,11 +20,11 @@ router.post('/auth/sign_up', userValid, validateAll, userController.create);
 router.post('/auth/connect', validateConnection, validationsConnection, userController.connect);
 router.post('/articles', postChecker,validateAll, postValidation, postController.create);
 router.patch('/article/:id', postValidation, postController.edit);
-router.delete('/auth/delete/:id', postValidation, postController.delete);
+router.delete('/delete/:id', postValidation, postController.delete);
 router.get('/feeds', postController.getAll);
 
 router.get('/articles/:id', postController.viewSpecific);
 router.post('/aricles/:id/comments', postValidation, commentController.create);
 // router.use(ErrorHandler);
-router.use(ErrorHandler);
+//router.use(ErrorHandler);
 export default router;

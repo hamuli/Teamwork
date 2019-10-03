@@ -13,10 +13,11 @@ const post = {
   },
   edit(req, res) {
     const findOneArticle = findOne(req.params.id);
+
     if (!findOneArticle) {
       return res.status(404).send({ status: 400, error: 'Article not found' });
     }
-    if (req.userData.id.toString() === findOneArticle.authorId) {
+    if (req.userData.id.toString() === Number(findOneArticle.authorId)) {
       const editOneArticle = update(findOneArticle.ArticleId, req.body);
 
       return res.status(200).send({ status: 200, message: 'post was updated succesfully', data: { editOneArticle } });
@@ -29,15 +30,17 @@ const post = {
     const findOneId = findOne(req.params.id);
 
     if (!findOneId) {
-      return res.status(404).send({ status: 400, error: 'not found' });
+      return res.status(404).send({ status: 404, error: 'not found' });
     }
-    if (req.userData.id === findOneId.authorId.toString()) {
+    if (req.userData.id === Number(findOneId.authorId)) {
       const mouveOutPost = moveout(req.params.id);
 
-      return res.status(204).send({ status: 204, message: 'article successfully deleted', data: ({ mouveOutPost }) });
+      res.status(200).send({ status: 204, message: 'article successfully deleted' });
+    // eslint-disable-next-line brace-style
     }
     // eslint-disable-next-line no-lone-blocks
-    { return res.status(204).send({ status: 404, error: 'you can not  delete this post ' });
+    else {
+      res.status(401).send({ status: 401, error: 'you can not  delete this post ' });
     }
   },
   viewSpecific(req, res) {
