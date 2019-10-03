@@ -67,17 +67,6 @@ describe('Sign In', ()=> {
         done();
       });
   });
-  it('it should not sign in with an empty input', (done)=> {
-    chai.request(app)
-      .post('/api/v1/auth/connect')
-      .set('Content-type', 'application/x-www-form-urlencoded')
-      .send()
-      .end((err, res)=> {
-        if (err) done(err);
-        expect(res.status).to.equal(400);
-        done();
-      });
-  });
   it('it should sign in with an invalid password', (done)=> {
     chai.request(app)
       .post('/api/v1/auth/connect')
@@ -97,39 +86,6 @@ describe('Sign In', ()=> {
       .end((err, res)=> {
         if (err) done(err);
         expect(res.status).to.equal(401);
-        done();
-      });
-  });
-  it('it should not sign in with a password that no much 6 element and have at least one number ', (done)=> {
-    chai.request(app)
-      .post('/api/v1/auth/connect')
-      .set('Content-type', 'application/x-www-form-urlencoded')
-      .send()
-      .end((err, res)=> {
-        if (err) done(err);
-        expect(res.status).to.equal(400);
-        done();
-      });
-  });
-  it('it should not sign in with a email that no have @ . in it', (done)=> {
-    chai.request(app)
-      .post('/api/v1/auth/connect')
-      .set('Content-type', 'application/x-www-form-urlencoded')
-      .send(stockData.signin[3])
-      .end((err, res)=> {
-        if (err) done(err);
-        expect(res.status).to.equal(400);
-        done();
-      });
-  });
-  it('it should not create an account with an empty input', (done)=> {
-    chai.request(app)
-      .post('/api/v1/auth/connect')
-      .set('Content-type', 'application/x-www-form-urlencoded')
-      .send(stockData.signin[4])
-      .end((err, res)=> {
-        if (err) done(err);
-        expect(res.status).to.equal(400);
         done();
       });
   });
@@ -162,19 +118,6 @@ describe('Creation of a Article post', ()=> {
         done();
       });
   });
-
-  it('access to articles route allowed, but should not post article when title is empty', (done)=> {
-    chai.request(app)
-      .post('/api/v1/articles')
-      .set('content-type', 'application/json')
-      .set('auth-token', `${tokens}`)
-      .send(stockData.articles[3])
-      .end((err, res)=> {
-        if (err) done(err);
-        expect(res.status).to.equal(401);
-        done();
-      });
-  });
   it('access to articles route allowed, but should not post article when Article is empty', (done)=> {
     chai.request(app)
       .post('/api/v1/articles')
@@ -199,7 +142,6 @@ describe('Creation of a Article post', ()=> {
         done();
       });
   });
-
   it('whene everything is okey then create an article', (done)=> {
     chai.request(app)
       .post('/api/v1/articles')
@@ -291,7 +233,7 @@ describe('Creation of a Article post', ()=> {
         done();
       });
   });
- 
+
   it('it error if the token is invalid', (done)=> {
     chai.request(app)
       .post('/aricles/:id/comments')
@@ -304,5 +246,4 @@ describe('Creation of a Article post', ()=> {
         done();
       });
   });
- 
 });
