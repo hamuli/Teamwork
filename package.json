@@ -4,7 +4,7 @@
     "description": "this work is for andela bootcamp challenge",
     "main": "index.js",
     "scripts": {
-        "build": "babel server.js --out-dir build",
+       
         "start": "babel-node index.js",
         "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test | coveralls",
         "test": "nyc mocha --exit --timeout 4000 --require @babel/register  ./server/tests/*.js"
