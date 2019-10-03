@@ -53,16 +53,6 @@
         "nyc": "^14.1.1"
     },
     "devDependencies": {
-        "@babel/register": "^7.6.2",
-        "@typescript-eslint/eslint-plugin": "^2.3.0",
-        "@typescript-eslint/parser": "^2.3.0",
-        "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.3",
-        "babel-node": "0.0.1-security",
-        "babel-plugin-istanbul": "^5.2.0",
-        "babel-preset-env": "^1.7.0",
-        "babel-register": "^6.26.0",
-        "babel-watch": "^7.0.0",
         "brace": "^0.11.1",
         "chai": "^4.2.0",
         "chai-http": "^4.3.0",
