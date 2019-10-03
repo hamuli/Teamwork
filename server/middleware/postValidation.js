@@ -10,5 +10,5 @@ export default [
     .exists({ checkFalsy: true })
     .withMessage('article post is required')
     .isLength({ min: 2 })
-    .withMessage('must be at least 2 characters long')
+    .withMessage('must be at least 2 characters long'),
 ];
