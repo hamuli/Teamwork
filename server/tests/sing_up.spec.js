@@ -248,39 +248,6 @@ describe('Creation of a Article post', ()=> {
         done();
       });
   });
-
-  it('it will return all post  ', (done)=> {
-    chai.request(app)
-      .get('/api/v1/feeds')
-      .set('content-type', 'application/json')
-      .end((err, res)=> {
-        if (err) done(err);
-        expect(res.status).to.equal(200);
-        done();
-      });
-  });
-  it('user can not edit a post that you didn\'t  post', (done)=> {
-    chai.request(app)
-      .patch('/api/v1/article/1')
-      .set('content-type', 'application/json')
-      .set('auth-token', `${tokens}`)
-      .send(stockData.articles[0])
-      .end((err, res)=> {
-        if (err) done(err);
-        expect(res.status).to.equal(401);
-        done();
-      });
-  });
-  it('it will return a post with all comment', (done)=> {
-    chai.request(app)
-      .get('/api/v1/articles/1')
-      .set('content-type', 'application/json')
-      .end((err, res)=> {
-        if (err) done(err);
-        expect(res.status).to.equal(200);
-        done();
-      });
-  });
   it('it will return 200  if the article is deleted', (done)=> {
     chai.request(app)
       .delete('/api/v1/delete/1')
@@ -292,15 +259,23 @@ describe('Creation of a Article post', ()=> {
         done();
       });
   });
-
-  it('you can not delete a post that is not yours', (done)=> {
+  it('it will return all post  ', (done)=> {
     chai.request(app)
-      .delete('/api/v1/delete/1')
+      .get('/api/v1/feeds')
       .set('content-type', 'application/json')
-      .set('auth-token', `${tokens}`)
       .end((err, res)=> {
         if (err) done(err);
-        expect(res.status).to.equal(401);
+        expect(res.status).to.equal(200);
+        done();
+      });
+  });
+  it('it will return all post  ', (done)=> {
+    chai.request(app)
+      .get('/api/v1/feeds')
+      .set('content-type', 'application/json')
+      .end((err, res)=> {
+        if (err) done(err);
+        expect(res.status).to.equal(200);
         done();
       });
   });
@@ -316,27 +291,18 @@ describe('Creation of a Article post', ()=> {
         done();
       });
   });
-
-  it('it will return 404 in an invalid token ', (done)=> {
+ 
+  it('it error if the token is invalid', (done)=> {
     chai.request(app)
-      .delete('/api/v1/delete/1')
+      .post('/aricles/:id/comments')
       .set('content-type', 'application/json')
-      .set('auth-token', 'iiiwyywddddddddbdbbd')
+      .send(stockData.comments[0])
+      .set('auth-token', 'iiettetette')
       .end((err, res)=> {
         if (err) done(err);
         expect(res.status).to.equal(404);
         done();
       });
   });
-  it('it will return 404 if the article id is not found', (done)=> {
-    chai.request(app)
-      .delete('api/v1/delete/12')
-      .set('content-type', 'application/json')
-      .set('auth-token', `${tokens}`)
-      .end((err, res)=> {
-        if (err) done(err);
-        expect(res.status).to.equal(404);
-        done();
-      });
-  });
+ 
 });
