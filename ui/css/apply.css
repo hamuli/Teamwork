@@ -159,6 +159,7 @@ footer.text-center {
 }
 
 .features .box {
+
     background: #fff;
     box-shadow: 1px 1px 25px 0 rgba(0, 0, 0, .05);
     border-radius: 15px;
@@ -316,3 +317,64 @@ footer.text-center {
         text-align: center;
     }
 }
+=======
+        background: #fff;
+        box-shadow: 1px 1px 25px 0 rgba(0,0,0,.05);
+        border-radius: 15px;
+        padding: 60px 30px;
+        transition: all .4s ease-in-out;
+        margin: 20px;
+        flex: 1 1 33.33%;
+    }
+.items{
+    	padding-top: 30px;
+    	border-radius:20px;
+    }
+@media only screen and (max-width:768px){
+    .logo{width: 130px;}
+     .link-holder{ margin-right: 200px; margin-top: 10px;}
+     .item h1, .item p {width: 400px ;margin-left:10px;}
+     .item img{width: 300px; margin-left: 10px;}
+     .items img{ width: 300px;  }
+}
+@media only screen and (max-width:1024px){
+    .logo{width: 150px;}
+     .link-holder{ margin-right: 200px; margin-top: 10px;}
+     .item h1, .item p {width: 400px ;margin-left:10px;}
+     .item img {
+        width: 300px;
+        height: 300px;
+     margin-left: 10px;}
+     .items img{ width: 300px;  }
+}
+@media only screen and (max-width:375px){
+     .logo{width: 100px;}
+     .link-holder{ margin-right: 100px; margin-top: 10px;}
+     .link-holder .item1{ margin-left: : 10px;font-size: 13px;}
+     .link-holder .item2{ margin-left: 10px; font-size: 13px; margin-left: 10px; }
+     .item h1, .item p {width: 200px;}
+     .item h1{ font-size:15px; }
+     .item h2 {font-size: 16px;}
+     .item img{width: 150px;padding-right: 20px;}
+     .items img{ width: 150px;}
+     .box{width: 30px;height: 80px;margin-left: 5px; display: flex;flex-direction: column;} 
+     .box img{ width: 30px;}
+     .box h3{ font-size: 9px; text-align: center; }
+}
+  @media only screen and (max-width:414px){
+ .logo{width: 100px;}
+     .link-holder{ margin-right: 100px; margin-top: 10px;}
+     .link-holder .item1{ margin-left: : 10px;font-size: 13px;}
+     .link-holder .item2{ margin-left: 10px; font-size: 13px; margin-left: 10px; }
+     .item h1, .item p {width: 200px;}
+     .item h1{ font-size:15px; }
+     .item h2 {font-size: 16px;}
+     .item img{width: 150px;padding-right: 20px;}
+     .items img{ width: 150px;}
+     .box{width: 30px;height: 80px;margin-left: 5px; display: flex;flex-direction: column;} 
+     .box img{ width: 30px;}
+     .box h3{ font-size: 9px; text-align: center; }
+
+
+  }  
+

@@ -7,8 +7,13 @@ const Auth = {
     let verifyEmail = findOneMail(email);
 
     if (verifyEmail) {
+
       return res.status(409).send({
         status: 409,
+
+      return res.status(401).send({
+        status: 401,
+
         error: 'email already taken',
       });
     }

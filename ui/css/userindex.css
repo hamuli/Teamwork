@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 .navbar {
+
     position: fixed;
     width: 100%;
     padding: 10px 40px;
@@ -18,10 +19,27 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
+
+    padding: 10px 40px;
+    background:#F5F5F5; 
+    font-size: 15px; 
+    padding-bottom: 10px;
+}
+.vavbars
+{ padding: 10px 40px;
+    background:#F5F5F5; 
+    font-size: 15px; 
+    padding-bottom: 10px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem; 
+
     margin: 0;
     box-sizing: border-box;
     color: #1e3056;
     display: flex;
+
     display: -webkit-flex;
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -36,11 +54,23 @@ body#landing {
 }
 
 .navright {
+
+    display: -webkit-flex ; -webkit-flex: 1; -ms-flex: 1;flex: 1;
+    flex-direction: column;
+    height:100%; 
+    overflow-x: hidden; 
+}
+body#landing{ background:#F5F5F5;}
+
+.navright
+{
+
     display: flex;
     flex-direction: row;
     margin-right: 10px;
     margin-top: 20px;
 }
+
 
 .navleft {
     float: right;
@@ -162,6 +192,100 @@ p {
     float: right;
     height: 50px;
 }
+
+.navleft
+{
+    float: right;
+    margin-right:50px;
+    margin-bottom:2px;
+    margin-top: -50px;
+}
+.navbar--link
+{
+    margin-right: 20px;
+    text-decoration: none;
+     color: #1e3056;
+    }
+.navbar--link:hover{
+    color: blue; 
+    text-decoration: underline;
+}
+#searchbars{
+    outline: none;
+     width: 400px;
+     height: 20px;
+     padding: 12px 20px;
+     margin-left: 280px;
+     border-radius :7px 7px 7px 7px;
+     box-sizing: border-box;
+     border: 1px solid black;
+    }
+.material-icons{margin-bottom: 10px;}
+.searchbar{
+    outline: none;
+     width: 450px;height: 20px;
+     padding: 12px 20px;
+     margin-left: 280px;
+     border-radius :7px 7px 7px 7px;
+     box-sizing: border-box;
+     border: 1px solid black;
+    }
+.searchicon{margin-left:10px;}
+.another{margin-left: 30px;}
+.startMessage{
+    margin-top: 105px;
+    border:1px solid white;
+    width: 600px;height:200px;
+    margin-right: 100px;
+    margin-left: -50px;
+    background-color: white;
+    border-radius: 20px;
+}
+.Mypost a{ text-decoration: none; }
+a ,p{ 
+    text-decoration: none;
+     color: #1e3056;
+    }
+.replay { 
+    color: #1e3056;
+     cursor: pointer;
+      font-weight: bold; 
+    }
+.column {float: left;
+    width: 33.33%;text-align: center;}
+.allcomment{
+    outline: none;
+     margin-top:24px;
+      width:auto; 
+      height:120px;
+      border: 1px solid white;
+       border-radius: 15px;
+       background-color: white;
+    }
+.allcomment img
+{
+     width: 40px; 
+     border: 1px solid #1e3056;
+      float: left; 
+      margin-left: 5px;
+      margin-top: 5px;
+      border-radius: 50px; 
+     }
+.glodie
+{
+    margin-right: 440px; 
+    color: #1e3056;
+}
+.allcomment button
+{
+    outline: none;
+     margin-right: 10px; 
+     border-radius:10px;
+     cursor: pointer; 
+     width: 20%; 
+     font-size: 16px; 
+     float: right;height: 50px;
+ }
 
 .allcomment button[type=submit]:hover {
     background: linear-gradient(to right, #1e3056 0, #1e3056 100%);
@@ -370,6 +494,7 @@ img {
 .comment:hover {
     color: white;
     background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
+
 .comment {
     margin-right: 350px;
     margin-left: 20px;
@@ -384,6 +509,188 @@ img {
 }
 .share:hover {
     color: white;
+
+.Onecomment img{ 
+    width: 30px; 
+    float: left;
+    border:1px solid black;
+    margin:5px 0px 0px 5px;
+    border-radius: 50%;
+}
+.glodie{ font-weight: bold;}
+.Onecomments a{ text-align: center; text-decoration: none;}
+.replay{ float: right;margin-right: 30px;}
+.Onecomments
+ {
+    outline: none;
+     margin-top:6px; 
+     width: auto;
+     height:30px;
+     border: 1px solid black;
+    border-radius: 5px;
+    background-color: white
+}
+.Onecomment
+{
+    margin-top:6px; 
+    width: auto; 
+    height:120px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+}
+.allcomment input
+{
+    outline: none;
+     width: 60%;
+     padding: 12px 20px;
+     margin-bottom: 10px;
+    margin-left: 100px;
+    border-radius: 20px;
+    font-size: 14px;
+     border: 1px solid #1e3056;
+     }
+.empty
+{
+    border: 1px solid white;
+    height: 25px;
+    width: 598px;
+    background-color:#1e3056;
+    border-radius: 5px;
+}
+.textPosts{
+    outline: none;
+     width:400px;
+     height: 80px;
+     border-radius: 3px;
+     margin-top: 40px;
+     margin-left: 20px;
+     font-size: 16px;
+     border-radius: 20px;
+     border:1px solid #1e3056;
+    }
+.textPost
+{
+    outline: none;
+     width: 500px;
+     height: 80px;
+     border-radius: 3px;
+     margin-top: 20px;
+     margin-left: 20px;
+     font-size: 16px;
+     border-radius: 20px;
+     border:1px solid #1e3056;
+    }
+.photo{display: flex;flex-direction: row;}
+.send{
+    margin-left: 420px;
+    margin-top: 15px;
+    border: 1px solid #1e3056;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 20px;
+    color: #1e3056;
+}
+.pucture
+{
+    float: left;
+    margin-top: 150px;
+    border: 1px solid #1e3056;
+    width: 50px;height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: #1e3056;
+    margin-left: 10px;
+}
+.photos{
+    margin-left: 19px;
+    margin-top: 15px;
+    border: 1px solid #1e3056;
+    width: 50px;height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 50%;
+    color: #1e3056;
+}
+.myIcons{
+    border: 1px solid #1e3056;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top :10px;
+}
+.Mypost{
+    border: 2px solid white;
+    margin-top: 10px;
+    width: 600px;
+    height:560px;
+    margin-right: 100px;
+    margin-left: -50px;
+    background-color: white;
+    border-radius: 20px;
+}
+.myempty
+{height: 25px;
+    width:auto;
+    background-color:#1e3056;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+#myOtherpost{margin-top: 50px }
+.column,.myOtherpost{margin-top: 30px}
+.myspecifpost{ margin-top: 90px;  }
+.borderMessage
+{
+    border-bottom: 1px solid black;
+    height: 90px;width: 598px;border-radius: 5px;
+}
+.thisPhoto
+{
+    border: 1px solid #1e3056;
+    width: 30px;height: 20px;
+    border-radius: 10%;
+    color: #1e3056;
+    padding-bottom: 5px;
+    padding-top:5px;
+    margin-top: 10px;
+}
+.profil{
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.title{margin-bottom:10px;}
+.time{
+    margin-right: 340px;
+    margin-bottom:2px;
+    font-weight: bold;
+}
+img{margin: 1px;width: 400px;}
+.comment{
+    margin-right: 350px;
+    margin-left: 20px;
+    border: 1px solid #1e3056;
+    width: 90px;height: 20px;
+    border-radius: 10px;
+    color: #1e3056;
+    padding-bottom: 5px;
+    padding-top:5px;
+    margin-top: 5px;}
+.share{border: 1px solid #1e3056;width: 90px;height: 20px;border-radius: 10px;color: #1e3056;padding-bottom: 5px;padding-top:5px;margin-top: 5px;}
+.footer{display: flex;flex-direction:row;}
+.MypostMessage{ border: 2px solid white;margin-top: 10px;width: 600px;height:560px;margin-right: 100px;margin-left: -50px;background-color: white;border-radius: 20px; }
+.images{margin: 2px;border:1px ;width: 320px;}
+.myfooter{border: 2px solid #1e3056; font-size: 18px;font-weight: bold;text-align: center;color:#1e3056; margin-top: 10px;width: 600px;height:30px;padding-top: 10px; margin-right: 100px;margin-left: -50px;background-color: white;border-radius: 10px;margin-bottom: 5px; }   
+}
+.imagess{margin: 2px;border:1px ;width: 470px;}
+.myprofils{margin-top: 105px;border:1px solid white;width: 600px;height:400px;margin-right: 100px;margin-left: -50px;background-color: white;	border-radius: 20px;
+ }
+ .modify[type=submit]:hover { color: white;
+
     background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
 
 .share {
@@ -536,6 +843,7 @@ img {
 .build:hover {
     color: white;
     background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
+
 .build {
     margin-left: 400px;
     border: 1px solid #1e3056;
@@ -958,7 +1266,115 @@ button,
     width: 30px; 
     height: 20px;
 
+.btn{cursor: pointer;outline: none; margin-top: 20px; width: 100px; height: 60px;font-weight: bold;border-radius: 5%;display: none; }
+
+.modal-delete{width: 500px; height: 210px;background-color:white;border-radius: 7px; position: fixed; margin-top: 200px;}
+.pg-delete{width: 100%; height:1550px; background-color:rgb(0,0,0,0.7); position: absolute;display:flex;justify-content:center;align-items:top; display: none;}
+.modal-content{margin-left: 30%; width: 500px; height: 250px;background-color:white;border-radius: 7px; position:relative;margin-top: 120px;}
+#textss{ text-align: center;margin-left: 10px; margin-top: 80px; font-size: 18px;}
+.deletePost{padding-top: 10px;border-radius: 10px; text-align: center; width: 130px; height: 40px; font-size: 16px; background-color:red ; color: white; margin-left: 20px;}
+.mylastFlex{ display:flex;flex-direction:row; }
+.cancelPost{padding-top: 10px;border-radius: 10px; text-align: center; width: 130px; height: 40px; font-size: 16px; background-color:green ; color: white;float: right;margin-left: 190px; }
+.mybutton{width: 110px; height: 40px;margin-right: 20px; margin-top: 20px;cursor:pointer; border-radius: 7px;outline: none; font-size: 16px;float: right;  }
+button ,.mybutton[type=submit]:hover{color:white;background: linear-gradient(to right, #1e3056 0, #1e3056 100%);}
+.material-icons{
+    font-size: 16px;
 }
+@media only screen and (max-width: 360px){
+.material-icons{
+        font-size: 10px;
+    }
+.startMessage{ width: 350px;}
+.empty{width:auto;}
+.textPost{width:250px;}
+.Mypost{width: 350px;height:300px;; }
+img{width: 200px; margin-right: 30px;}
+a, p{ font-size:9px;  width: 300px;}
+.footer{width: 350px;}
+.borderMessage {
+    height: 40px;
+    width: 350px;}
+    .thisPhoto {
+        width: 30px;
+        height: 20px;
+        border-radius: 5%;
+        color: #1e3056;
+    margin-right: 100px;
+    margin-top:-3px;
+    }
+    .borderMessage{width: auto}
+element.style {
+}
+.myprofil {
+    margin-bottom: 40px;
+    text-align: center;
+    margin-left: 50px;}
+.modify {margin-top: 6px;
+    cursor: pointer;
+    outline: none;
+
+
+    margin-left: 198px;}
+    .imgs {
+        width: 100px;
+    }
+    .build {
+     margin-left: -10px;width: 20px;}
+     .share{margin-left:-20px;width: 40px;}
+    .time{margin-top:-20px;}
+    .title{ margin-left: -100px;margin-left: 20px;}
+    .searchbar {
+        margin-left: 0px;
+        width: 200px;
+    }
+    #searchbars {margin-left: 30px;}
+    .send {margin-left: 20px; width: 40px;}
+    .navbar {padding: 10px 10px;}
+    .logo{ width: 60px; margin-left: 80px;}
+    .navleft{margin-top: 30px;margin-left: 100px;}
+    #searchbars { margin-left: -100px;}
+    .myfooter {
+  
+        width: 350px;
+        height: 20px;
+    }
+}
+@media only screen and (max-width: 768px){
+.startMessage{ width: 400px;}
+.empty{width:auto;}
+.textPost{width:200px;}
+.Mypost{width: 760px;height:400px;; }
+.send {margin-left: 220px; width: 40px;}
+.Mypost{width: 400px;}
+img{width:200px; margin-right: 20px;}
+a,p{font-size: 10px; width:400px;}
+.borderMessage{width:auto;}
+.thisPhoto {margin-right: 100px;}
+.logo{margin-left: 200px;}
+.share{margin-left: -160px;}
+.imgs{width:180px;}
+.footer{}
+.searchbar {
+   
+    width: 170px;
+    height: 20px;
+    padding: 12px 20px;
+    margin-left: 0px;
+}
+.myfooter{width: 390px;}
+.navleft{margin-top: 50px;}
+.build {
+    margin-left: -80px;width: 20px;}
+    .title{margin-right: 100px;}
+    .modify {
+        margin-top: 66px;}
+#searchbars {
+           
+            width: 200px;
+            margin-left: 0px;
+        }
+}
+
         .navleft {
             margin-right: 300px;
             margin-top: 37px;
@@ -1049,5 +1465,25 @@ button,
         .column {
             width: 100%;
         }
+
+@media only screen and (max-width: 1027px){
+     .startMessage{width:700px;}
+     .empty{width: auto;}
+     .logo{margin-left: 230px;}
+          .share{margin-left: -2px;}
+     .Mypost{width:700px;}
+     .borderMessage{width: 700px;}
+     .myfooter{width: 700px;}
+     #searchbars {
+           
+        width: 100px;
+        margin-left: 0px;
+    }
+    .navleft{margin-top: 10px;}
+    .modify{margin-top:90px;}
+    #searchbars {
+        width: 300px;
+        margin-left: 0px;
+
     }
 }
