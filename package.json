@@ -4,10 +4,13 @@
     "description": "this work is for andela bootcamp challenge",
     "main": "index.js",
     "scripts": {
+        "dev-start": "nodemon index --exec babel-node --presets @babel/preset-env",
+        "test": " nyc _mocha ./Server/test/*.js --recursive --require @babel/polyfill  --require @babel/register --no-timeout --exit",
+        "generate-lcov": "nyc --reporter=lcov --reporter=text-lcov npm test | coveralls",
+        "coverage": "nyc npm test && npm run generate-lcov",
+        "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
         "build": "babel index.js --out-dir build",
-        "start": "babel-node index.js",
-        "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test | coveralls",
-        "test": "nyc mocha --exit --timeout 4000 --require @babel/register  ./server/tests/*.js"
+        "start": "babel-node index.js"
     },
     "nyc": {
         "require": [
@@ -38,7 +41,6 @@
         "@babel/preset-env": "^7.6.2",
         "@babel/register": "^7.6.2",
         "@babel/runtime": "^7.6.2",
-        "@typescript-eslint/eslint-plugin": "^2.3.0",
         "append-transform": "^2.0.0",
         "babel-node": "0.0.1-security",
         "bcryptjs": "^2.4.3",
