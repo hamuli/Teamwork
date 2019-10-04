@@ -19,7 +19,7 @@ const Auth = {
     return res.header('auth-token', token).status(201).send({
       status: 201,
       message: 'User created successfully',
-      data: ({ creates, token }),
+      data: ({token }),
     });
   },
   connect(req, res) {

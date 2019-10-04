@@ -1,5 +1,6 @@
 # Teamwork
-
+[![Coverage Status](https://coveralls.io/repos/github/hamuli/Teamwork/badge.svg?branch=develop)](https://coveralls.io/github/hamuli/Teamwork?branch=develop)
+[![Build Status](https://travis-ci.org/hamuli/Teamwork.svg?branch=develop)](https://travis-ci.org/hamuli/Teamwork)
 ## Platform Description
 Teamwork is an internal social network for organizations’ employees. The goal of this
 application is to facilitate more interaction between colleagues and facilitate team bonding.

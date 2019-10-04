@@ -5,8 +5,8 @@ export const postDb = [];
 
 export const create = (data)=> {
   const newpost = {
-    ArticleId: postDb.length + 1,
-    created_on: new Date().toLocaleString(),
+    articleId: postDb.length + 1,
+    createdOn: new Date().toLocaleString(),
     title: data.title,
     article: data.article,
     authorId: data.authorId,
