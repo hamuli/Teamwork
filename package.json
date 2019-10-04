@@ -40,6 +40,7 @@
         "@babel/runtime": "^7.6.2",
         "@typescript-eslint/eslint-plugin": "^2.3.0",
         "append-transform": "^2.0.0",
+        "babel-node": "0.0.1-security",
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
         "brace": "^0.11.1",
